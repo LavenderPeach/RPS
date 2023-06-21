@@ -8,4 +8,20 @@ function getComputerChoice() {
     return 'Scissors';
     }
       }
-  console.log(getComputerChoice());
+
+  function playRound(playerSelection, computerSelection) {
+    if (computerSelection == playerSelection) {
+        return ('You Tied!');
+    } else if (
+        (computerSelection == 'Rock' && playerSelection == 'Scissors') ||
+        (computerSelection == 'Scissors' && playerSelection == 'Paper') ||
+        (computerSelection == 'Paper' && playerSelection == 'Rock') )
+        return ('You Lose!')
+     else {
+        return ('You Win!')
+    }
+}
+
+const playerSelection ="Rock"
+const computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
